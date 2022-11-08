@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aqua;
+      }
+      #mycard {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 400px;
+        background-color: wheat;
+        border-radius: 30px;
+        padding: 30px;
+      }
+
+      #weathericon {
+        display: flex;
+        justify-content: center;
+      }
+      #cityname{
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+        font-weight: 700;
+        font-family: sans-serif;
+        height: 100%;
+        align-items: center;
+        color: rgb(60, 52, 52);
+      }
+      #citytemperature{
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+        font-weight: 700;
+        font-family: sans-serif;
+        color: #0ad6a0;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mycard">
+      <div id="weathericon">
+        <!-- <i class="fa fa-sun-o" style="font-size: 170px"></i> -->
+        {%weatherState%}
+      </div>
+      <div id="citytemperature">{%temperature%}</div>
+      <div id="cityname">{%city%}</div>
+    </div>
+  </body>
+</html>
